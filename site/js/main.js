@@ -364,6 +364,87 @@
     });
   }
 
+  /* ---------- LIGHTBOX (Galeria de Projetos) ---------- */
+  function initLightbox() {
+    var lightbox = $('#lightbox');
+    var lightboxImg = $('#lightboxImg');
+    var lightboxCaption = $('#lightboxCaption');
+    var closeBtn = $('#lightboxClose');
+    var prevBtn = $('#lightboxPrev');
+    var nextBtn = $('#lightboxNext');
+    
+    if (!lightbox || !lightboxImg || !lightboxCaption) return;
+
+    // Encontrar todas as imagens que podem ser abertas (as de projeto)
+    var images = $$('.frame img');
+    var currentIndex = 0;
+
+    function showImage(index) {
+      currentIndex = (index + images.length) % images.length;
+      var img = images[currentIndex];
+      if (img) {
+        lightboxImg.src = img.getAttribute('src');
+        lightboxImg.alt = img.getAttribute('alt') || '';
+        lightboxCaption.textContent = img.getAttribute('alt') || '';
+      }
+    }
+
+    function openLightbox(index) {
+      showImage(index);
+      lightbox.classList.add('is-active');
+      lightbox.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden'; // impede scroll de fundo
+    }
+
+    function closeLightbox() {
+      lightbox.classList.remove('is-active');
+      lightbox.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = ''; // restaura scroll
+      // Limpar o src para evitar flash da imagem anterior na reabertura
+      setTimeout(function () {
+        lightboxImg.src = '';
+        lightboxCaption.textContent = '';
+      }, 400);
+    }
+
+    // Adicionar evento de clique em cada imagem do portfólio
+    images.forEach(function (img, index) {
+      img.addEventListener('click', function () {
+        openLightbox(index);
+      });
+    });
+
+    // Eventos de clique nos controles
+    if (closeBtn) closeBtn.addEventListener('click', closeLightbox);
+    if (prevBtn) prevBtn.addEventListener('click', function (e) {
+      e.stopPropagation();
+      showImage(currentIndex - 1);
+    });
+    if (nextBtn) nextBtn.addEventListener('click', function (e) {
+      e.stopPropagation();
+      showImage(currentIndex + 1);
+    });
+
+    // Clicar fora da imagem fecha o lightbox
+    lightbox.addEventListener('click', function (e) {
+      if (e.target === lightbox || e.target.classList.contains('lightbox__content')) {
+        closeLightbox();
+      }
+    });
+
+    // Suporte a teclado
+    document.addEventListener('keydown', function (e) {
+      if (!lightbox.classList.contains('is-active')) return;
+      if (e.key === 'Escape') {
+        closeLightbox();
+      } else if (e.key === 'ArrowLeft') {
+        showImage(currentIndex - 1);
+      } else if (e.key === 'ArrowRight') {
+        showImage(currentIndex + 1);
+      }
+    });
+  }
+
   /* ---------- init ---------- */
   function init() {
     initIntro();
@@ -375,6 +456,7 @@
     initVideos();
     onScrollNav();
     onScrollMisc();
+    initLightbox();
   }
 
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init);
