@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Thalyta Maia · Arquitetura e Interiores</title>
+  <script>document.documentElement.className += ' js';</script>
+  <meta name="description"
+    content="Thalyta Maia — Arquitetura e Interiores. Projetos residenciais e comerciais com sensibilidade, criando ambientes que acolhem e inspiram. Atendimento presencial e online para todo o Brasil.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Jost:wght@300;400;500&family=Marcellus&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/animations.css">
+</head>
+
+<body>
+
+  <!-- barra de progresso de scroll -->
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+  <!-- ================= NAV ================= -->
+  <nav class="nav" id="nav">
+    <a href="#hero" class="nav__logo" data-navlink aria-label="Início">
+      <span class="logo-mark">
+        <svg viewBox="0 0 104 122" fill="none" aria-hidden="true">
+          <path d="M18 116 L18 54 A34 34 0 0 1 86 54 L86 116" stroke="currentColor" stroke-width="3.4" />
+        </svg>
+        <span class="logo-mark__tm">TM</span>
+      </span>
+      <span class="nav__brand">
+        <span class="nav__name">THALYTA MAIA</span>
+        <span class="nav__tag">ARQUITETURA E INTERIORES</span>
+      </span>
+    </a>
+
+    <div class="nav__links" id="deskLinks">
+      <a href="#essencia" class="nav__link" data-navlink>Essência</a>
+      <a href="#servicos" class="nav__link" data-navlink>Serviços</a>
+      <a href="#projetos" class="nav__link" data-navlink>Projetos</a>
+      <a href="#bastidores" class="nav__link" data-navlink>Bastidores</a>
+      <a href="#contato" class="nav__link nav__link--btn" data-navlink>Contato</a>
+    </div>
+
+    <button class="nav__burger" id="burger" data-navlink aria-label="Abrir menu" aria-expanded="false"
+      aria-controls="drawer">
+      <span class="burger-box" aria-hidden="true"><span class="burger-line"></span><span
+          class="burger-line"></span><span class="burger-line"></span></span>
+    </button>
+  </nav>
+
+  <!-- mobile drawer -->
+  <div class="drawer-overlay" id="overlay" hidden></div>
+  <aside class="drawer" id="drawer" aria-hidden="true">
+    <button class="drawer__close" id="drawerClose" aria-label="Fechar menu">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+        stroke-linecap="round" aria-hidden="true">
+        <path d="M6 6l12 12M18 6L6 18" />
+      </svg>
+    </button>
+    <nav class="drawer__links">
+      <a href="#essencia" data-drawerlink>Essência</a>
+      <a href="#servicos" data-drawerlink>Serviços</a>
+      <a href="#projetos" data-drawerlink>Projetos</a>
+      <a href="#bastidores" data-drawerlink>Bastidores</a>
+      <a href="#contato" data-drawerlink>Contato</a>
+    </nav>
+    <div class="drawer__contact">(65) 99646-6782<br>arquitetathalytamaia@gmail.com</div>
+  </aside>
+
+  <!-- ================= HERO ================= -->
+  <section id="hero" class="hero">
+    <div class="hero__slides" id="heroSlides">
+      <div class="hero__slide is-active" style="background-image:url('assets/images/hero-cozinha.jpg')" data-pan="1"></div>
+      <div class="hero__slide" style="background-image:url('assets/images/hero-lounge.jpg')" data-pan="2"></div>
+      <div class="hero__slide" style="background-image:url('assets/images/hero-lavabo.jpg')" data-pan="3"></div>
+      <div class="hero__slide" style="background-image:url('assets/images/hero-quarto.jpg')" data-pan="4"></div>
+    </div>
+    <div class="hero__overlay"></div>
+
+    <div class="hero__content" id="heroContent">
+      <span class="logo-mark logo-mark--hero" data-hero>
+        <svg viewBox="0 0 104 122" fill="none" aria-hidden="true">
+          <path class="logo-draw" d="M18 116 L18 54 A34 34 0 0 1 86 54 L86 116" stroke="currentColor"
+            stroke-width="2.6" />
+        </svg>
+        <span class="logo-mark__tm">TM</span>
+      </span>
+      <h1 class="hero__title" data-hero data-letters>THALYTA MAIA</h1>
+      <div class="hero__subtitle" data-hero>
+        <span class="hero__rule"></span>
+        <span class="hero__sub-text">Arquitetura e Interiores</span>
+        <span class="hero__rule"></span>
+      </div>
+    </div>
+
+    <a href="#essencia" class="hero__cue" aria-label="Rolar para baixo">
+      <svg width="20" height="30" viewBox="0 0 20 30" fill="none" stroke="currentColor" stroke-width="1.3"
+        aria-hidden="true">
+        <path d="M10 1v22M4 17l6 6 6-6" />
+      </svg>
+    </a>
+
+    <div class="hero__dots" id="heroDots" role="tablist" aria-label="Slides">
+      <button class="hero__dot is-active" data-slide="0" aria-label="Slide 1"></button>
+      <button class="hero__dot" data-slide="1" aria-label="Slide 2"></button>
+      <button class="hero__dot" data-slide="2" aria-label="Slide 3"></button>
+      <button class="hero__dot" data-slide="3" aria-label="Slide 4"></button>
+    </div>
+  </section>
+
+  <!-- ================= ESSÊNCIA ================= -->
+  <section id="essencia" class="essencia">
+    <div class="essencia__pattern" aria-hidden="true">
+      <svg width="100%" height="100%" preserveAspectRatio="xMidYMid slice">
+        <defs>
+          <pattern id="tmArchEss" x="0" y="0" width="150" height="176" patternUnits="userSpaceOnUse"
+            patternTransform="rotate(-15)">
+            <path d="M28 160 L28 78 A44 44 0 0 1 116 78 L116 160" fill="none" stroke="#efe6da" stroke-width="2.6" />
+            <path d="M72 66 L72 160" fill="none" stroke="#efe6da" stroke-width="2.6" />
+          </pattern>
+        </defs>
+        <rect width="100%" height="100%" fill="url(#tmArchEss)" />
+      </svg>
+    </div>
+
+    <div class="essencia__inner">
+      <div class="essencia__text">
+        <div class="kicker kicker--tan" data-reveal="up">O escritório</div>
+        <h2 class="section-title" data-reveal="up" data-reveal-delay="60">ESSÊNCIA <span
+            class="section-title__sep">|</span> TM</h2>
+        <p data-reveal="up" data-reveal-delay="120">Em nosso escritório, acreditamos que a arquitetura vai além das
+          formas e estruturas. Cada projeto é uma oportunidade de refletir a essência de quem o vivencia, criando
+          ambientes que acolhem e inspiram. Trabalhamos com sensibilidade, buscando entender as necessidades e a
+          personalidade de nossos clientes para transformar espaços em lugares únicos e cheios de significado.
+          Arquitetura é mais do que construir; é criar conexões e emoções. Cada detalhe é pensado para proporcionar uma
+          experiência que ressoe com aqueles que irão habitar o espaço.</p>
+        <p data-reveal="up" data-reveal-delay="180">Oferecemos atendimento presencial e online para todo o Brasil, com
+          carinho e dedicação, criando espaços que conectam com a sua essência, onde quer que você esteja.</p>
+      </div>
+      <div class="essencia__portrait-wrap" data-reveal="up" data-reveal-delay="140">
+        <figure class="portrait portrait--arch" data-reveal="mask">
+          <img src="assets/images/portrait.jpg" alt="Thalyta Maia, arquiteta" class="portrait__img" data-parallax="0.05"
+            loading="lazy">
+        </figure>
+        <figcaption class="portrait__caption">THALYTA MAIA</figcaption>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= SERVIÇOS ================= -->
+  <section id="servicos" class="servicos">
+    <div class="servicos__strip" aria-hidden="true" data-parallax="0.05">
+      <svg width="100%" height="100%" preserveAspectRatio="xMidYMid slice">
+        <defs>
+          <pattern id="tmArchStrip" x="0" y="0" width="120" height="150" patternUnits="userSpaceOnUse"
+            patternTransform="rotate(-12)">
+            <path d="M22 132 L22 66 A36 36 0 0 1 94 66 L94 132" fill="none" stroke="#cbb99f" stroke-width="2.2" />
+            <path d="M58 56 L58 132" fill="none" stroke="#cbb99f" stroke-width="2.2" />
+          </pattern>
+        </defs>
+        <rect width="100%" height="100%" fill="url(#tmArchStrip)" />
+      </svg>
+    </div>
+    <div class="servicos__inner">
+      <div class="badge" data-reveal="up">SERVIÇOS</div>
+      <div class="servicos__grid" data-stagger>
+        <article class="service" data-reveal="scale">
+          <div class="service__num">01</div>
+          <div class="service__body">
+            <h3 class="service__name">Projeto Arquitetônico</h3>
+            <div class="service__scope">Residencial | Comercial</div>
+            <p class="service__desc">O projeto de arquitetura vai além da construção de espaços; ele traduz ideias em
+              realidade, criando ambientes que atendem às necessidades e sonhos de cada cliente.</p>
+          </div>
+        </article>
+        <article class="service" data-reveal="scale">
+          <div class="service__num">02</div>
+          <div class="service__body">
+            <h3 class="service__name">Projeto de Interiores</h3>
+            <div class="service__scope">Residencial | Comercial</div>
+            <p class="service__desc">Cada detalhe é pensado para unir funcionalidade e estilo, transformando o ambiente
+              em um lugar acolhedor e único.</p>
+          </div>
+        </article>
+        <article class="service" data-reveal="scale">
+          <div class="service__num">03</div>
+          <div class="service__body">
+            <h3 class="service__name">Projeto de Reforma</h3>
+            <div class="service__scope">Residencial | Comercial</div>
+            <p class="service__desc">Transformamos o ambiente otimizando espaços e melhorando funcionalidade e estética,
+              com soluções criativas alinhadas às necessidades do cliente.</p>
+          </div>
+        </article>
+        <article class="service" data-reveal="scale">
+          <div class="service__num">04</div>
+          <div class="service__body">
+            <h3 class="service__name">Ambientação</h3>
+            <div class="service__scope">Residencial | Comercial</div>
+            <p class="service__desc">A ambientação é o processo de transformar um espaço, tornando-o acolhedor e cheio
+              de personalidade.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= PROJETOS =================
+       TEXTOS PROVISÓRIOS — a Thalyta vai revisar/substituir as descrições e categorias. -->
+  <section id="projetos" class="projetos">
+    <div class="projetos__inner">
+      <header class="projetos__head" data-reveal="up">
+        <div class="kicker kicker--terra">Portfólio</div>
+        <h2 class="section-title section-title--dark">Conheça alguns dos nossos projetos</h2>
+        <div class="rule-center"></div>
+      </header>
+
+      <div class="projetos__list">
+        <!-- 1. Cozinha -->
+        <article class="project">
+          <div class="project__media" data-reveal="left">
+            <figure class="frame"><img src="assets/pinterest/cozinha-marmore.jpg" alt="Cozinha gourmet — vista geral"
+                loading="lazy"></figure>
+            <figure class="frame"><img src="assets/pinterest/cozinha-office.jpg" alt="Cozinha gourmet — copa"
+                loading="lazy"></figure>
+          </div>
+          <div class="project__text" data-reveal="right">
+            <div class="kicker kicker--terra">Interiores</div>
+            <h3 class="project__name">Cozinha Gourmet</h3>
+            <div class="rule-left"></div>
+            <p>Cozinha integrada de linhas elegantes, com ilha em mármore, marcenaria clara e detalhes em dourado. A
+              iluminação foi pensada para valorizar texturas e criar uma atmosfera acolhedora para cozinhar e receber.</p>
+          </div>
+        </article>
+
+        <!-- 2. Quarto Infantil -->
+        <article class="project project--reverse">
+          <div class="project__media" data-reveal="right">
+            <figure class="frame"><img src="assets/pinterest/quarto-infantil-floral.jpg"
+                alt="Quarto infantil — ambiente" loading="lazy"></figure>
+            <figure class="frame"><img src="assets/pinterest/bercario.jpg" alt="Berçário — detalhe" loading="lazy">
+            </figure>
+          </div>
+          <div class="project__text" data-reveal="left">
+            <div class="kicker kicker--terra">Interiores</div>
+            <h3 class="project__name">Quarto Infantil</h3>
+            <div class="rule-left"></div>
+            <p>Um quarto lúdico e delicado, com papel de parede floral, marcenaria planejada e cantos de aconchego. Cada
+              detalhe foi pensado para crescer junto com a criança, unindo funcionalidade e ternura.</p>
+          </div>
+        </article>
+
+        <!-- 3. Lavabo & Toucador (imagem única) -->
+        <article class="project">
+          <div class="project__media project__media--single" data-reveal="left">
+            <figure class="frame frame--tall"><img src="assets/pinterest/lavabo-toucador.jpg"
+                alt="Lavabo e toucador" loading="lazy"></figure>
+          </div>
+          <div class="project__text" data-reveal="right">
+            <div class="kicker kicker--terra">Interiores</div>
+            <h3 class="project__name">Lavabo &amp; Toucador</h3>
+            <div class="rule-left"></div>
+            <p>Lavabo sofisticado com toucador em palhinha, espelho iluminado e paleta neutra. Um espaço pequeno tratado
+              como joia, onde textura e luz fazem toda a diferença.</p>
+          </div>
+        </article>
+
+        <!-- 4. Quarto de Casal (imagem única) -->
+        <article class="project project--reverse">
+          <div class="project__media project__media--single" data-reveal="right">
+            <figure class="frame frame--tall"><img src="assets/pinterest/quarto-casal.jpg" alt="Quarto de casal"
+                loading="lazy"></figure>
+          </div>
+          <div class="project__text" data-reveal="left">
+            <div class="kicker kicker--terra">Interiores</div>
+            <h3 class="project__name">Quarto de Casal</h3>
+            <div class="rule-left"></div>
+            <p>Suíte serena com cabeceira estofada, marcenaria amadeirada e iluminação suave. Conforto e elegância
+              atemporal para o descanso.</p>
+          </div>
+        </article>
+
+        <!-- 5. Banheiro (imagem única) -->
+        <article class="project">
+          <div class="project__media project__media--single" data-reveal="left">
+            <figure class="frame frame--tall"><img src="assets/pinterest/banheiro-terrazzo.jpg" alt="Banheiro terrazzo"
+                loading="lazy"></figure>
+          </div>
+          <div class="project__text" data-reveal="right">
+            <div class="kicker kicker--terra">Reforma + Interiores</div>
+            <h3 class="project__name">Banheiro Terrazzo</h3>
+            <div class="rule-left"></div>
+            <p>Banheiro contemporâneo em terrazzo, com marcenaria sob medida e ducha ampla. Materiais nobres e uma
+              composição limpa e funcional.</p>
+          </div>
+        </article>
+
+        <!-- 6. Lounge / Recepção (imagem única) -->
+        <article class="project project--reverse">
+          <div class="project__media project__media--single" data-reveal="right">
+            <figure class="frame"><img src="assets/pinterest/lounge-verde.jpg" alt="Lounge e recepção" loading="lazy">
+            </figure>
+          </div>
+          <div class="project__text" data-reveal="left">
+            <div class="kicker kicker--terra">Comercial</div>
+            <h3 class="project__name">Lounge &amp; Recepção</h3>
+            <div class="rule-left"></div>
+            <p>Área de espera comercial que acolhe: poltronas verdes, painéis ripados e iluminação difusa. Um ambiente
+              que combina produtividade e bem-estar — veja em movimento logo abaixo.</p>
+          </div>
+        </article>
+
+        <!-- 7. Loja Marias Kids -->
+        <article class="project">
+          <div class="project__media" data-reveal="left">
+            <figure class="frame"><img src="assets/pinterest/marias-kids-fachada.jpg" alt="Loja Marias Kids — fachada"
+                loading="lazy"></figure>
+            <figure class="frame"><img src="assets/pinterest/marias-kids-logo.jpg" alt="Loja Marias Kids — interior"
+                loading="lazy"></figure>
+          </div>
+          <div class="project__text" data-reveal="right">
+            <div class="kicker kicker--terra">Comercial + Reforma</div>
+            <h3 class="project__name">Loja Marias Kids</h3>
+            <div class="rule-left"></div>
+            <p>Projeto de varejo infantil completo: da fachada à ambientação interna. Identidade lúdica, vitrine
+              convidativa e um percurso de compra pensado para encantar famílias.</p>
+          </div>
+        </article>
+
+        <!-- 8. Escritório Orion (imagem única) -->
+        <article class="project project--reverse">
+          <div class="project__media project__media--single" data-reveal="right">
+            <figure class="frame"><img src="assets/pinterest/escritorio-orion.jpg" alt="Escritório Orion"
+                loading="lazy"></figure>
+          </div>
+          <div class="project__text" data-reveal="left">
+            <div class="kicker kicker--terra">Comercial</div>
+            <h3 class="project__name">Escritório Orion</h3>
+            <div class="rule-left"></div>
+            <p>Escritório corporativo com divisórias de vidro e marcenaria ripada, equilibrando transparência, acústica
+              e sofisticação para o dia a dia de trabalho.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= ATMOSFERA (vídeo ambiente em arco) ================= -->
+  <section id="atmosfera" class="atmosfera">
+    <div class="atmosfera__inner" data-reveal="up">
+      <div class="atmosfera__head">
+        <div class="kicker kicker--tan">Atmosfera</div>
+        <h2 class="section-title">Entre no ambiente</h2>
+      </div>
+      <figure class="arch-video" data-reveal="mask">
+        <video class="arch-video__el" id="ambientVideo" muted loop playsinline preload="none"
+          poster="assets/videos/reel-04.jpg">
+          <source src="assets/videos/reel-04.mp4" type="video/mp4">
+        </video>
+        <button class="arch-video__sound" id="ambientSound" aria-label="Ativar som" hidden>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M11 5 6 9H2v6h4l5 4V5z" />
+            <path d="M15.5 8.5a5 5 0 0 1 0 7" />
+          </svg>
+        </button>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ================= BASTIDORES (reels) ================= -->
+  <section id="bastidores" class="bastidores">
+    <div class="bastidores__inner">
+      <header class="bastidores__head" data-reveal="up">
+        <div class="kicker kicker--tan">@thalytamaia.arq</div>
+        <h2 class="section-title">Bastidores</h2>
+        <p class="bastidores__sub">Obras, processo e o dia a dia do escritório. Toque para assistir.</p>
+      </header>
+
+      <div class="reels" data-stagger>
+        <figure class="reel" data-reveal="up">
+          <video class="reel__el" preload="none" playsinline poster="assets/videos/reel-01.jpg">
+            <source src="assets/videos/reel-01.mp4" type="video/mp4">
+          </video>
+          <button class="reel__play" aria-label="Reproduzir vídeo"></button>
+        </figure>
+        <figure class="reel" data-reveal="up">
+          <video class="reel__el" preload="none" playsinline poster="assets/videos/reel-03.jpg">
+            <source src="assets/videos/reel-03.mp4" type="video/mp4">
+          </video>
+          <button class="reel__play" aria-label="Reproduzir vídeo"></button>
+        </figure>
+        <figure class="reel" data-reveal="up">
+          <video class="reel__el" preload="none" playsinline poster="assets/videos/reel-05.jpg">
+            <source src="assets/videos/reel-05.mp4" type="video/mp4">
+          </video>
+          <button class="reel__play" aria-label="Reproduzir vídeo"></button>
+        </figure>
+        <figure class="reel" data-reveal="up">
+          <video class="reel__el" preload="none" playsinline poster="assets/videos/reel-07.jpg">
+            <source src="assets/videos/reel-07.mp4" type="video/mp4">
+          </video>
+          <button class="reel__play" aria-label="Reproduzir vídeo"></button>
+        </figure>
+        <figure class="reel" data-reveal="up">
+          <video class="reel__el" preload="none" playsinline poster="assets/videos/reel-02.jpg">
+            <source src="assets/videos/reel-02.mp4" type="video/mp4">
+          </video>
+          <button class="reel__play" aria-label="Reproduzir vídeo"></button>
+        </figure>
+        <figure class="reel" data-reveal="up">
+          <video class="reel__el" preload="none" playsinline poster="assets/videos/reel-06.jpg">
+            <source src="assets/videos/reel-06.mp4" type="video/mp4">
+          </video>
+          <button class="reel__play" aria-label="Reproduzir vídeo"></button>
+        </figure>
+      </div>
+
+      <div class="bastidores__cta" data-reveal="up">
+        <a class="btn btn--outline btn--light" href="https://instagram.com/thalytamaia.arq" target="_blank"
+          rel="noopener">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"
+            aria-hidden="true">
+            <rect x="3" y="3" width="18" height="18" rx="5" />
+            <circle cx="12" cy="12" r="4" />
+            <circle cx="17.2" cy="6.8" r="1" fill="currentColor" stroke="none" />
+          </svg>
+          <span>Seguir no Instagram</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CONTATO ================= -->
+  <section id="contato" class="contato">
+    <div class="contato__text">
+      <h2 class="section-title" data-reveal="up">ENTRE EM CONTATO!</h2>
+      <p class="contato__lead" data-reveal="up" data-reveal-delay="80">Será um prazer realizar esse projeto e fazer
+        parte da realização desse sonho.</p>
+
+      <div class="contato__details" data-reveal="up" data-reveal-delay="140">
+        <div class="contato__row"><span class="contato__label">CAU</span>A305121-8</div>
+        <a class="contato__row" href="mailto:arquitetathalytamaia@gmail.com"><span
+            class="contato__label">EMAIL</span>arquitetathalytamaia@gmail.com</a>
+        <a class="contato__row" href="https://wa.me/5565996466782" target="_blank" rel="noopener"><span
+            class="contato__label">CONTATO</span>(65) 99646-6782</a>
+      </div>
+
+      <div class="contato__actions" data-reveal="up" data-reveal-delay="200">
+        <a class="btn btn--solid" href="https://wa.me/5565996466782" target="_blank" rel="noopener">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"
+            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 11.5a8.5 8.5 0 0 1-12.2 7.6L3 20.5l1.5-5.3A8.5 8.5 0 1 1 21 11.5Z" />
+            <path
+              d="M8.5 9.2c0-.5.4-.9.9-.8.3 0 .5.2.6.5l.5 1.2c.1.3 0 .5-.2.7l-.3.3c.5 1 1.3 1.7 2.3 2.2l.3-.4c.2-.2.5-.3.7-.2l1.2.5c.3.1.4.4.4.7 0 .8-.7 1.4-1.5 1.3a6.7 6.7 0 0 1-5.4-5.5Z" />
+          </svg>
+          <span>WhatsApp</span>
+        </a>
+        <a class="btn btn--outline" href="https://instagram.com/thalytamaia.arq" target="_blank" rel="noopener">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"
+            aria-hidden="true">
+            <rect x="3" y="3" width="18" height="18" rx="5" />
+            <circle cx="12" cy="12" r="4" />
+            <circle cx="17.2" cy="6.8" r="1" fill="currentColor" stroke="none" />
+          </svg>
+          <span>Instagram</span>
+        </a>
+      </div>
+    </div>
+    <div class="contato__media" style="background-image:url('assets/images/pattern.png')" data-parallax="0.08"
+      aria-hidden="true"></div>
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="footer">
+    <span class="logo-mark logo-mark--footer" aria-hidden="true">
+      <svg viewBox="0 0 104 122" fill="none">
+        <path d="M18 116 L18 54 A34 34 0 0 1 86 54 L86 116" stroke="currentColor" stroke-width="4" />
+      </svg>
+    </span>
+    <span>© <span id="year">2026</span> THALYTA MAIA · ARQUITETURA E INTERIORES · CAU A305121-8</span>
+  </footer>
+
+  <!-- floating whatsapp -->
+  <a class="wa-float" href="https://wa.me/5565996466782" target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
+    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#f6f1e9" stroke-width="1.6"
+      stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <path d="M21 11.5a8.5 8.5 0 0 1-12.2 7.6L3 20.5l1.5-5.3A8.5 8.5 0 1 1 21 11.5Z" />
+      <path
+        d="M8.5 9.2c0-.5.4-.9.9-.8.3 0 .5.2.6.5l.5 1.2c.1.3 0 .5-.2.7l-.3.3c.5 1 1.3 1.7 2.3 2.2l.3-.4c.2-.2.5-.3.7-.2l1.2.5c.3.1.4.4.4.7 0 .8-.7 1.4-1.5 1.3a6.7 6.7 0 0 1-5.4-5.5Z" />
+    </svg>
+  </a>
+
+  <!-- back to top -->
+  <button class="to-top" id="toTop" aria-label="Voltar ao topo">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"
+      stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <path d="M12 19V5M6 11l6-6 6 6" />
+    </svg>
+  </button>
+
+  <!-- ================= LIGHTBOX / GALERIA ================= -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Galeria de imagens" aria-hidden="true">
+    <button class="lightbox__btn lightbox__close" id="lbClose" aria-label="Fechar galeria">
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"
+        stroke-linecap="round" aria-hidden="true">
+        <path d="M6 6l12 12M18 6L6 18" />
+      </svg>
+    </button>
+    <button class="lightbox__btn lightbox__nav lightbox__nav--prev" id="lbPrev" aria-label="Imagem anterior">
+      <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"
+        stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M15 5l-7 7 7 7" />
+      </svg>
+    </button>
+    <figure class="lightbox__stage" id="lbStage">
+      <img class="lightbox__img" id="lbImg" alt="">
+      <figcaption class="lightbox__cap">
+        <span class="lightbox__title" id="lbTitle"></span>
+        <span class="lightbox__count" id="lbCount"></span>
+      </figcaption>
+    </figure>
+    <button class="lightbox__btn lightbox__nav lightbox__nav--next" id="lbNext" aria-label="Próxima imagem">
+      <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"
+        stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M9 5l7 7-7 7" />
+      </svg>
+    </button>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+
+</html>
