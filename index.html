@@ -97,10 +97,38 @@
   <!-- ================= HERO ================= -->
   <section id="hero" class="hero">
     <div class="hero__slides" id="heroSlides">
-      <div class="hero__slide is-active" style="background-image:url('assets/images/hero-cozinha.jpg')" data-pan="1"></div>
-      <div class="hero__slide" style="background-image:url('assets/images/hero-lounge.jpg')" data-pan="2"></div>
-      <div class="hero__slide" style="background-image:url('assets/images/hero-lavabo.jpg')" data-pan="3"></div>
-      <div class="hero__slide" style="background-image:url('assets/images/hero-quarto.jpg')" data-pan="4"></div>
+      <div class="hero__slide is-active" data-pan="1">
+        <picture>
+          <source type="image/webp"
+            srcset="assets/images/webp/hero-cozinha-768.webp 768w, assets/images/webp/hero-cozinha-1280.webp 1280w, assets/images/webp/hero-cozinha-1440.webp 1440w"
+            sizes="100vw">
+          <img class="hero__slide-img" src="assets/images/hero-cozinha.jpg" alt="" fetchpriority="high" decoding="async">
+        </picture>
+      </div>
+      <div class="hero__slide" data-pan="2">
+        <picture>
+          <source type="image/webp"
+            srcset="assets/images/webp/hero-lounge-768.webp 768w, assets/images/webp/hero-lounge-1280.webp 1280w, assets/images/webp/hero-lounge-1920.webp 1920w"
+            sizes="100vw">
+          <img class="hero__slide-img" src="assets/images/hero-lounge.jpg" alt="" loading="lazy" decoding="async">
+        </picture>
+      </div>
+      <div class="hero__slide" data-pan="3">
+        <picture>
+          <source type="image/webp"
+            srcset="assets/images/webp/hero-lavabo-768.webp 768w, assets/images/webp/hero-lavabo-1280.webp 1280w, assets/images/webp/hero-lavabo-1440.webp 1440w"
+            sizes="100vw">
+          <img class="hero__slide-img" src="assets/images/hero-lavabo.jpg" alt="" loading="lazy" decoding="async">
+        </picture>
+      </div>
+      <div class="hero__slide" data-pan="4">
+        <picture>
+          <source type="image/webp"
+            srcset="assets/images/webp/hero-quarto-768.webp 768w, assets/images/webp/hero-quarto-1280.webp 1280w"
+            sizes="100vw">
+          <img class="hero__slide-img" src="assets/images/hero-quarto.jpg" alt="" loading="lazy" decoding="async">
+        </picture>
+      </div>
     </div>
     <div class="hero__overlay"></div>
 
@@ -163,8 +191,11 @@
       </div>
       <div class="essencia__portrait-wrap" data-reveal="up" data-reveal-delay="140">
         <figure class="portrait portrait--arch" data-reveal="mask">
-          <img src="assets/images/portrait.jpg" alt="Thalyta Maia, arquiteta" class="portrait__img" data-parallax="0.05"
-            loading="lazy">
+          <picture>
+            <source type="image/webp" srcset="assets/images/webp/portrait-686.webp">
+            <img src="assets/images/portrait.jpg" alt="Thalyta Maia, arquiteta" class="portrait__img"
+              data-parallax="0.05" loading="lazy">
+          </picture>
         </figure>
         <figcaption class="portrait__caption">THALYTA MAIA</figcaption>
       </div>
@@ -245,9 +276,21 @@
         <!-- 1. Quarto Infantil -->
         <article class="project">
           <div class="project__media" data-reveal="left">
-            <figure class="frame"><img src="assets/pinterest/quarto-infantil-floral.jpg"
-                alt="Quarto infantil — ambiente" loading="lazy"></figure>
-            <figure class="frame"><img src="assets/pinterest/bercario.jpg" alt="Berçário — detalhe" loading="lazy">
+            <figure class="frame">
+              <picture>
+                <source type="image/webp"
+                  srcset="assets/images/webp/quarto-infantil-floral-800.webp 800w, assets/images/webp/quarto-infantil-floral-1200.webp 1200w"
+                  sizes="(max-width: 860px) 92vw, 44vw">
+                <img src="assets/pinterest/quarto-infantil-floral.jpg" alt="Quarto infantil — ambiente" loading="lazy">
+              </picture>
+            </figure>
+            <figure class="frame">
+              <picture>
+                <source type="image/webp"
+                  srcset="assets/images/webp/bercario-800.webp 800w, assets/images/webp/bercario-1200.webp 1200w"
+                  sizes="(max-width: 860px) 92vw, 44vw">
+                <img src="assets/pinterest/bercario.jpg" alt="Berçário — detalhe" loading="lazy">
+              </picture>
             </figure>
           </div>
           <div class="project__text" data-reveal="right">
@@ -262,10 +305,22 @@
         <!-- 2. Cozinha Gourmet -->
         <article class="project project--reverse">
           <div class="project__media" data-reveal="right">
-            <figure class="frame"><img src="assets/pinterest/cozinha-marmore.jpg" alt="Cozinha gourmet — vista geral"
-                loading="lazy"></figure>
-            <figure class="frame"><img src="assets/pinterest/cozinha-office.jpg" alt="Cozinha gourmet — copa"
-                loading="lazy"></figure>
+            <figure class="frame">
+              <picture>
+                <source type="image/webp"
+                  srcset="assets/images/webp/cozinha-marmore-800.webp 800w, assets/images/webp/cozinha-marmore-1200.webp 1200w"
+                  sizes="(max-width: 860px) 92vw, 44vw">
+                <img src="assets/pinterest/cozinha-marmore.jpg" alt="Cozinha gourmet — vista geral" loading="lazy">
+              </picture>
+            </figure>
+            <figure class="frame">
+              <picture>
+                <source type="image/webp"
+                  srcset="assets/images/webp/cozinha-office-800.webp 800w, assets/images/webp/cozinha-office-1200.webp 1200w"
+                  sizes="(max-width: 860px) 92vw, 44vw">
+                <img src="assets/pinterest/cozinha-office.jpg" alt="Cozinha gourmet — copa" loading="lazy">
+              </picture>
+            </figure>
           </div>
           <div class="project__text" data-reveal="left">
             <div class="kicker kicker--terra">Residencial · Interiores</div>
@@ -279,8 +334,14 @@
         <!-- 3. Quarto de Casal (imagem única) -->
         <article class="project">
           <div class="project__media project__media--single" data-reveal="left">
-            <figure class="frame frame--tall"><img src="assets/pinterest/quarto-casal.jpg" alt="Quarto de casal"
-                loading="lazy"></figure>
+            <figure class="frame frame--tall">
+              <picture>
+                <source type="image/webp"
+                  srcset="assets/images/webp/quarto-casal-800.webp 800w, assets/images/webp/quarto-casal-1200.webp 1200w"
+                  sizes="(max-width: 860px) 92vw, 44vw">
+                <img src="assets/pinterest/quarto-casal.jpg" alt="Quarto de casal" loading="lazy">
+              </picture>
+            </figure>
           </div>
           <div class="project__text" data-reveal="right">
             <div class="kicker kicker--terra">Residencial · Interiores</div>
@@ -294,8 +355,14 @@
         <!-- 4. Lavabo & Toucador (imagem única) -->
         <article class="project project--reverse">
           <div class="project__media project__media--single" data-reveal="right">
-            <figure class="frame frame--tall"><img src="assets/pinterest/lavabo-toucador.jpg"
-                alt="Lavabo e toucador" loading="lazy"></figure>
+            <figure class="frame frame--tall">
+              <picture>
+                <source type="image/webp"
+                  srcset="assets/images/webp/lavabo-toucador-800.webp 800w, assets/images/webp/lavabo-toucador-1200.webp 1200w"
+                  sizes="(max-width: 860px) 92vw, 44vw">
+                <img src="assets/pinterest/lavabo-toucador.jpg" alt="Lavabo e toucador" loading="lazy">
+              </picture>
+            </figure>
           </div>
           <div class="project__text" data-reveal="left">
             <div class="kicker kicker--terra">Residencial · Interiores</div>
@@ -309,8 +376,13 @@
         <!-- 5. Banheiro Terrazzo (imagem única) -->
         <article class="project">
           <div class="project__media project__media--single" data-reveal="left">
-            <figure class="frame frame--tall"><img src="assets/pinterest/banheiro-terrazzo.jpg" alt="Banheiro terrazzo"
-                loading="lazy"></figure>
+            <figure class="frame frame--tall">
+              <picture>
+                <source type="image/webp" srcset="assets/images/webp/banheiro-terrazzo-800.webp 800w"
+                  sizes="(max-width: 860px) 92vw, 44vw">
+                <img src="assets/pinterest/banheiro-terrazzo.jpg" alt="Banheiro terrazzo" loading="lazy">
+              </picture>
+            </figure>
           </div>
           <div class="project__text" data-reveal="right">
             <div class="kicker kicker--terra">Residencial · Reforma + Interiores</div>
@@ -327,10 +399,21 @@
         <!-- 6. Loja Marias Kids -->
         <article class="project">
           <div class="project__media" data-reveal="left">
-            <figure class="frame"><img src="assets/pinterest/marias-kids-fachada.jpg" alt="Loja Marias Kids — fachada"
-                loading="lazy"></figure>
-            <figure class="frame"><img src="assets/pinterest/marias-kids-logo.jpg" alt="Loja Marias Kids — interior"
-                loading="lazy"></figure>
+            <figure class="frame">
+              <picture>
+                <source type="image/webp"
+                  srcset="assets/images/webp/marias-kids-fachada-800.webp 800w, assets/images/webp/marias-kids-fachada-1200.webp 1200w"
+                  sizes="(max-width: 860px) 92vw, 44vw">
+                <img src="assets/pinterest/marias-kids-fachada.jpg" alt="Loja Marias Kids — fachada" loading="lazy">
+              </picture>
+            </figure>
+            <figure class="frame">
+              <picture>
+                <source type="image/webp" srcset="assets/images/webp/marias-kids-logo-707.webp 707w"
+                  sizes="(max-width: 860px) 92vw, 44vw">
+                <img src="assets/pinterest/marias-kids-logo.jpg" alt="Loja Marias Kids — interior" loading="lazy">
+              </picture>
+            </figure>
           </div>
           <div class="project__text" data-reveal="right">
             <div class="kicker kicker--terra">Comercial · Reforma</div>
@@ -344,7 +427,13 @@
         <!-- 7. Lounge / Recepção (imagem única) -->
         <article class="project project--reverse">
           <div class="project__media project__media--single" data-reveal="right">
-            <figure class="frame"><img src="assets/pinterest/lounge-verde.jpg" alt="Lounge e recepção" loading="lazy">
+            <figure class="frame">
+              <picture>
+                <source type="image/webp"
+                  srcset="assets/images/webp/lounge-verde-800.webp 800w, assets/images/webp/lounge-verde-1200.webp 1200w"
+                  sizes="(max-width: 860px) 92vw, 44vw">
+                <img src="assets/pinterest/lounge-verde.jpg" alt="Lounge e recepção" loading="lazy">
+              </picture>
             </figure>
           </div>
           <div class="project__text" data-reveal="left">
@@ -359,8 +448,13 @@
         <!-- 8. Escritório Orion (imagem única) -->
         <article class="project">
           <div class="project__media project__media--single" data-reveal="left">
-            <figure class="frame"><img src="assets/pinterest/escritorio-orion.jpg" alt="Escritório Orion"
-                loading="lazy"></figure>
+            <figure class="frame">
+              <picture>
+                <source type="image/webp" srcset="assets/images/webp/escritorio-orion-720.webp 720w"
+                  sizes="(max-width: 860px) 92vw, 44vw">
+                <img src="assets/pinterest/escritorio-orion.jpg" alt="Escritório Orion" loading="lazy">
+              </picture>
+            </figure>
           </div>
           <div class="project__text" data-reveal="right">
             <div class="kicker kicker--terra">Comercial · Interiores</div>
@@ -496,7 +590,7 @@
         </a>
       </div>
     </div>
-    <div class="contato__media" style="background-image:url('assets/images/pattern.png')" data-parallax="0.08"
+    <div class="contato__media" style="background-image:url('assets/images/webp/pattern-799.webp')" data-parallax="0.08"
       aria-hidden="true"></div>
   </section>
 
