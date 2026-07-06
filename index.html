@@ -517,19 +517,22 @@
     </svg>
   </button>
 
-<!-- Lightbox / Galeria de Fotos Ampliada -->
-<div class="lightbox" id="lightbox" aria-hidden="true" role="dialog" aria-label="Visualizador de Imagem">
-  <button class="lightbox__close" id="lightboxClose" aria-label="Fechar visualizador">
+<!-- Lightbox / Galeria de fotos ampliada (initGallery em js/main.js) -->
+<div class="lightbox" id="lightbox" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Visualizador de imagens">
+  <button class="lightbox__btn lightbox__close" id="lbClose" aria-label="Fechar visualizador">
     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M18 6L6 18M6 6l12 12"/></svg>
   </button>
-  <button class="lightbox__nav lightbox__nav--prev" id="lightboxPrev" aria-label="Imagem anterior">
+  <button class="lightbox__btn lightbox__nav lightbox__nav--prev" id="lbPrev" aria-label="Imagem anterior">
     <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg>
   </button>
-  <div class="lightbox__content">
-    <img src="" alt="" class="lightbox__img" id="lightboxImg">
-    <div class="lightbox__caption" id="lightboxCaption"></div>
-  </div>
-  <button class="lightbox__nav lightbox__nav--next" id="lightboxNext" aria-label="Próxima imagem">
+  <figure class="lightbox__stage" id="lbStage">
+    <img src="" alt="" class="lightbox__img" id="lbImg">
+    <figcaption class="lightbox__cap">
+      <span class="lightbox__title" id="lbTitle"></span>
+      <span class="lightbox__count" id="lbCount"></span>
+    </figcaption>
+  </figure>
+  <button class="lightbox__btn lightbox__nav lightbox__nav--next" id="lbNext" aria-label="Próxima imagem">
     <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18l6-6-6-6"/></svg>
   </button>
 </div>
