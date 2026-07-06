@@ -22,13 +22,6 @@
 @keyframes cue { 0%, 100% { transform: translateX(-50%) translateY(0); opacity: .85; } 50% { transform: translateX(-50%) translateY(9px); opacity: .25; } }
 .hero__cue { animation: cue 2.2s ease-in-out infinite; }
 
-/* desenho do arco do logo (hero) */
-@keyframes draw { to { stroke-dashoffset: 0; } }
-.logo-draw {
-  stroke-dasharray: 260; stroke-dashoffset: 260;
-  animation: draw 1.6s var(--ease) .3s forwards;
-}
-
 /* =========================================================
    Intro do hero (revela no load via JS: body.loaded)
    ========================================================= */

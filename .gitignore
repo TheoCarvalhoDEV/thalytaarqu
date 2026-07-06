@@ -1,0 +1,11 @@
+# Material interno de cliente — não publicar
+COMUNICACAO_VISUAL/
+melhorias.txt
+20260706-*.mp4
+
+# Dependências de ferramentas locais
+tools/node_modules/
+
+# SO / editor
+Thumbs.db
+Desktop.ini
