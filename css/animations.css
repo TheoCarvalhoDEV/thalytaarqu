@@ -85,6 +85,21 @@ body.loaded .page-curtain { transform: translateY(-100%); }
 [data-stagger] [data-reveal] { transition-delay: calc(var(--i, 0) * 90ms); }
 
 /* =========================================================
+   Drawer mobile — links em cascata na abertura
+   ========================================================= */
+.drawer .drawer__links a {
+  opacity: 0; transform: translateX(18px);
+  transition: opacity .5s var(--ease), transform .5s var(--ease),
+              color .3s var(--ease), padding-left .3s var(--ease);
+}
+.drawer.is-open .drawer__links a { opacity: 1; transform: none; }
+.drawer.is-open .drawer__links a:nth-child(1) { transition-delay: .10s; }
+.drawer.is-open .drawer__links a:nth-child(2) { transition-delay: .16s; }
+.drawer.is-open .drawer__links a:nth-child(3) { transition-delay: .22s; }
+.drawer.is-open .drawer__links a:nth-child(4) { transition-delay: .28s; }
+.drawer.is-open .drawer__links a:nth-child(5) { transition-delay: .34s; }
+
+/* =========================================================
    Acessibilidade — respeitar prefers-reduced-motion
    ========================================================= */
 @media (prefers-reduced-motion: reduce) {
@@ -95,6 +110,7 @@ body.loaded .page-curtain { transform: translateY(-100%); }
     scroll-behavior: auto !important;
   }
   [data-reveal] { opacity: 1 !important; transform: none !important; clip-path: none !important; }
+  .drawer .drawer__links a { opacity: 1 !important; transform: none !important; }
   .hero__content [data-hero],
   .hero__title .char { opacity: 1 !important; transform: none !important; }
   .hero__rule { transform: scaleX(1) !important; }

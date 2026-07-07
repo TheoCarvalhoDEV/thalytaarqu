@@ -467,6 +467,8 @@ a.contato__row:hover { color: var(--cream); }
   transition: transform .3s var(--ease), color .3s var(--ease);
 }
 .btn span, .btn svg { position: relative; z-index: 1; }
+.btn svg { transition: transform .35s var(--ease); }
+.btn:hover svg { transform: translateX(2px) scale(1.05); }
 .btn:hover { transform: translateY(-2px); }
 .btn--solid { background: var(--cream); color: var(--brand); }
 .btn--outline { border: 1px solid rgba(239,230,218,.42); color: #efe6da; }
