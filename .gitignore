@@ -6,6 +6,9 @@ melhorias.txt
 # Dependências de ferramentas locais
 tools/node_modules/
 
+# Configuração local do Claude Code
+.claude/
+
 # SO / editor
 Thumbs.db
 Desktop.ini
