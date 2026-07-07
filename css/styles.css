@@ -103,16 +103,11 @@ a { color: inherit; }
 }
 .nav__logo {
   position: relative; display: inline-block; line-height: 0;
-  text-decoration: none;
+  text-decoration: none; color: var(--cream);
+  transition: color .45s var(--ease);
 }
-/* logo oficial — versão clara (sobre o hero) e escura (nav sólida) sobrepostas com crossfade */
-.nav__logo-img {
-  height: 46px; width: auto; display: block;
-  transition: opacity .45s var(--ease);
-}
-.nav__logo-img--dark { position: absolute; left: 0; top: 0; opacity: 0; }
-.nav--solid .nav__logo-img--light { opacity: 0; }
-.nav--solid .nav__logo-img--dark { opacity: 1; }
+/* logo oficial em SVG vetorial — herda a cor de .nav__logo (transição já existente) */
+.nav__logo svg { height: 46px; width: auto; display: block; }
 
 .nav__links { display: flex; align-items: center; gap: clamp(16px, 2.3vw, 38px); }
 .nav__link {
@@ -534,11 +529,11 @@ a.contato__row:hover { color: var(--cream); }
   .nav__links { display: none; }
   .nav__burger { display: inline-flex; }
   .contato__media { min-height: 240px; }
-  .nav__logo-img { height: 40px; }
+  .nav__logo svg { height: 40px; }
 }
 
 @media (max-width: 400px) {
-  .nav__logo-img { height: 34px; }
+  .nav__logo svg { height: 34px; }
 }
 
 @media (max-width: 620px) {
